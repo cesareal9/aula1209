@@ -1,18 +1,9 @@
-const autor = require('../models/autor_model');
+const Autor = require('./models/autor_model');
 
-// exports.createautor = async (req, res) => {
-//   try {
-//     const autor = new autor(req.body);
-//     await autor.save();
-//     res.status(201).json(autor);
-//   } catch (error) {
-//     res.status(400).json({ error: 'Erro ao criar autor' });
-//   }
-// };
 
 exports.createautor = async (req, res) => {
   try {
-    const autor = await autor.create(req.body);
+    const Autor = await utor.create(req.body);
     res.status(201).json(autor);
   } catch (error) {
     res.status(400).json({ error: 'Erro ao criar autor' });
